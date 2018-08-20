@@ -1,7 +1,7 @@
 this file records the utilities for use of language of C++ and Python,
 should syncronize with github
 
-update date: 20180819
+update date: 20180820
 
 using vs cmd to compile c++ in windows:
 cl /EHsc hello.cpp   https://msdn.microsoft.com/en-us/library/ms235639.aspx
@@ -97,3 +97,13 @@ TreeNode* node = new TreeNode(pre[i]);
 python:
 stack = [TreeNode(pre[0])]
 node = TreeNode(v)
+
+
+numeric:
+-get GCD and LCM:
+(a,b)=(A,B) while b>0:(a,b)=(a%b)
+gcd=a, lcm =A*B/a
+c++ has pre-defined function __gcd(A,B)
+
+-inclusion exclusion principle:
+A+B = A∪B - A∩B
