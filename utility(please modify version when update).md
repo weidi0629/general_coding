@@ -20,14 +20,27 @@ int sum =accumulate(A.begin(), A.end(), 0);
 -using {} to define a simple vector:
 return {a,b}
 
-set:
--make vector to set:
+*set:
+-unordered_set:   // unique ele, no sort
+
+--make vector to set:
 unordered_set<int> S(A.begin(), A.end());
 
--count
+--count:
 int c = S.count(a)
+ 
+-multiset  //sort, multi ele 
+--define
+multiset<pair<int,int>> high;
 
-String& char:
+--insert
+s.emplace(i)
+s.insert(i)
+
+--get&delete
+i=s.begin() s.erase(i) // rbegin
+
+*String& char:
 - iterator through the string:
 for (char c : w)
 
@@ -44,40 +57,55 @@ unordered_map<char, int> m;
 -assign value:
 m[c] = m.size()
 
+queue:
+-define:
+priority_queue<int> q; // first element is always the greatest 
+
 others:
 -iterator through 2^i
 int c = 1; c << 1
 
 Python:
-list:
+*list:
 -sum the ele in list:
 sum(A)
-
-set:
--list to set:
-Set(A)
 
 -list is interator:
 [w for w in words if F(w) == F(p)]
 
-dict:
+-sort a list with lambda:
+projects = sorted(zip(Profits, Capital), key=lambda l: l[1]) # zip return a list, sort key is 2nd ele in list
+
+*set:
+-list to set:
+Set(A)
+
+*dict:
 -define a dict and assign:
 d = {}  d['a'] = 5
 
 -get the value from dict:
 m.get(c,d) # m is a dict, d is the default value if c is not found in m
 
-String&char:
+*String&char:
 -convert int to char:
 char(97) # a is 97
 
 -append a string with chars
 "".join(chr(m[c] + 97) for c in w)  # it's chr, not char!
 
-enumerate:
+*enumerate:
 a = ['a','b','c'] 
 emumerate(a) return (0,a);(1,b);(2,c);
- 
+
+*heapq or heap queue #heap[0] element also returns the smallest element each time
+-push
+heapq.heappush(list, -projects[i][0]) #maintain heap structure in list
+
+-other op:
+heapify(iter)
+heappop(heap)
+
 
 traversal:
 tree: (1,2)(1,3)(2,4)(2,5) //(a,b) : a->b
