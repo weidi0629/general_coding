@@ -50,6 +50,17 @@ for (char c : w)
 -update string value by char:
 w[2] = 'c'; // w is a string
 
+*stringstream
+-define
+stringstream ss(path) // path is a string, eg. "aaa bbb(ccc)"
+
+-split
+getline(ss,root,' ')// put ss to root ans stop when meet the delimiting character, ie, root =="aaa", now ss only left " bbb(ccc)"
+
+--find
+s.find('(')) // find "bbb"
+s.substr(s.find('(') + 1, s.find(')') - s.find('(') - 1)  // find "ccc"
+
 map:
 -declare a map:
 unordered_map<char, int> m;
@@ -84,12 +95,21 @@ Set(A)
 -define a dict and assign:
 d = {}  d['a'] = 5
 
+-defaultdict  # auto init when value is collection, return default when key doesn't exist
+M = collections.defaultdict(list) #value is list
+M[a].append(b) # append value to list with key is a  
+
 -get the value from dict:
 m.get(c,d) # m is a dict, d is the default value if c is not found in m
 
 *String&char:
 -convert int to char:
 char(97) # a is 97
+
+-partition&split # str = 'aaa#bbb'
+a,b,c=str.partition('#') -> a=='aaa' b=='#' c=='bbb'
+a,b,=str.split('#') -> a=='aaa' b=='bbb' '#' is dropped
+split return a list, partition return a tuple
 
 -append a string with chars
 "".join(chr(m[c] + 97) for c in w)  # it's chr, not char!
