@@ -1,13 +1,13 @@
 this file records the utilities for use of language of C++ and Python,
 should syncronize with github
 
-update date: 20180820
+update date: 20180823
 
 using vs cmd to compile c++ in windows:
 cl /EHsc hello.cpp   https://msdn.microsoft.com/en-us/library/ms235639.aspx
 
 c++:
-vector:
+*vector:
 -sort vector
 sort(A.begin(),A.end()
 
@@ -61,22 +61,27 @@ getline(ss,root,' ')// put ss to root ans stop when meet the delimiting characte
 s.find('(')) // find "bbb"
 s.substr(s.find('(') + 1, s.find(')') - s.find('(') - 1)  // find "ccc"
 
-map:
+*map:
 -declare a map:
 unordered_map<char, int> m;
 
 -assign value:
 m[c] = m.size()
 
-queue:
+*queue:
 -define:
 priority_queue<int> q; // first element is always the greatest 
 
-others:
+*pair 
+-assign
+pair<int,int> p
+p={1,1}
+
+*others:
 -iterator through 2^i
 int c = 1; c << 1
 
-Python:
+***Python:
 *list:
 -sum the ele in list:
 sum(A)
