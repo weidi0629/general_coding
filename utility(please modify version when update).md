@@ -92,6 +92,9 @@ sum(A)
 -sort a list with lambda:
 projects = sorted(zip(Profits, Capital), key=lambda l: l[1]) # zip return a list, sort key is 2nd ele in list
 
+-sort a list in odd/even position:
+sorted(s[0::2]) / sorted(s[1::2])
+
 *set:
 -list to set:
 Set(A)
