@@ -26,6 +26,9 @@ return {a,b}
 --make vector to set:
 unordered_set<int> S(A.begin(), A.end());
 
+--upper bound
+s.upper_bound(b)
+
 --count:
 int c = S.count(a)
  
