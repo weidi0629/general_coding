@@ -1,7 +1,7 @@
 this file records the utilities for use of language of C++ and Python,
 should syncronize with github
 
-update date: 20180823
+update date: 20180831
 
 using vs cmd to compile c++ in windows:
 cl /EHsc hello.cpp   https://msdn.microsoft.com/en-us/library/ms235639.aspx
@@ -19,6 +19,12 @@ int sum =accumulate(A.begin(), A.end(), 0);
 
 -using {} to define a simple vector:
 return {a,b}
+
+-iota  //add vector from 0  -> {0,1,2,3,4,...}
+ iota(v.begin(), v.end(), 0);
+ 
+ -resize
+ v.resize(n);
 
 *set:
 -unordered_set:   // unique ele, no sort
