@@ -166,7 +166,7 @@ node = TreeNode(v)
 
 numeric:
 -get GCD and LCM:
-(a,b)=(A,B) while b>0:(a,b)=(a%b)
+(a,b)=(A,B) while b>0:(a,b)=(b,a%b)
 gcd=a, lcm =A*B/a
 c++ has pre-defined function __gcd(A,B)
 
