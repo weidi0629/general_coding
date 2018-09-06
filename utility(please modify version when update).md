@@ -116,6 +116,10 @@ d = {}  d['a'] = 5
 M = collections.defaultdict(list) #value is list
 M[a].append(b) # append value to list with key is a  
 
+M = collections.defaultdict(dict) #value is another dict
+
+operation on M is operation on its key, eg. iteratools.permutations(M) is permuation on its keys
+
 -get the value from dict:
 m.get(c,d) # m is a dict, d is the default value if c is not found in m
 
