@@ -90,6 +90,9 @@ p={1,1}
 -iterator through 2^i
 int c = 1; c << 1
 
+-memset ( void * ptr, int value, size_t num )
+ptr: Pointer to the block of memory to fill. value:Value to be set. num: Number of bytes to be set to the value.
+eg. double memo[200][200]; memset(memo, 0, sizeof(memo));
 ***Python:
 *list:
 -sum the ele in list:
