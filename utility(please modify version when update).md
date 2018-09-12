@@ -1,7 +1,7 @@
 this file records the utilities for use of language of C++ and Python,
 should syncronize with github
 
-update date: 20180831
+update date: 20180912
 
 using vs cmd to compile c++ in windows:
 cl /EHsc hello.cpp   https://msdn.microsoft.com/en-us/library/ms235639.aspx
@@ -129,6 +129,9 @@ m.get(c,d) # m is a dict, d is the default value if c is not found in m
 *String&char:
 -convert int to char:
 char(97) # a is 97
+
+-ord :ord() method returns an integer representing Unicode code point for the given Unicode character.
+eg. ord('a')
 
 -partition&split # str = 'aaa#bbb'
 a,b,c=str.partition('#') -> a=='aaa' b=='#' c=='bbb'
