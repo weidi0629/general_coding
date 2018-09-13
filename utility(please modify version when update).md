@@ -154,13 +154,17 @@ heapify(iter)
 heappop(heap)
 
 
-traversal:
+--traversal:
 tree: (1,2)(1,3)(2,4)(2,5) //(a,b) : a->b
 Inorder (Left, Root, Right) : 4 2 5 1 3
 Preorder (Root, Left, Right) : 1 2 4 5 3
 Postorder (Left, Right, Root) : 4 5 2 3 1
 https://www.geeksforgeeks.org/tree-traversals-inorder-preorder-and-postorder/
 
+-python BFS
+for _ in range(d - 1):
+        row = [kid for node in row for kid in (node.left, node.right) if kid]
+        
 c++ 
 -val <--> node:
 vector<TreeNode*> s;
