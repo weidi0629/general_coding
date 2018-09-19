@@ -1,7 +1,7 @@
 this file records the utilities for use of language of C++ and Python,
 should syncronize with github
 
-update date: 20180912
+update date: 20180919
 
 using vs cmd to compile c++ in windows:
 cl /EHsc hello.cpp   https://msdn.microsoft.com/en-us/library/ms235639.aspx
@@ -183,6 +183,9 @@ numeric:
 (a,b)=(A,B) while b>0:(a,b)=(b,a%b)
 gcd=a, lcm =A*B/a
 c++ has pre-defined function __gcd(A,B)
+
+- random num (0,n)
+rand()%n
 
 -inclusion exclusion principle:
 A+B = A∪B - A∩B
