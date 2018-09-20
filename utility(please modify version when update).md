@@ -73,6 +73,8 @@ s.substr(s.find('(') + 1, s.find(')') - s.find('(') - 1)  // find "ccc"
 *map:
 -declare a map:
 unordered_map<char, int> m;
+-for(auto i:m)
+    i.first...i.second...m.count(i.first+k)
 
 -assign value:
 m[c] = m.size()
