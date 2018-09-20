@@ -88,6 +88,11 @@ priority_queue<int> q; // first element is always the greatest
 pair<int,int> p
 p={1,1}
 
+*bit
+-bitset
+e.g. int x
+bitset<10>(x) 10bit binary
+
 *others:
 -iterator through 2^i
 int c = 1; c << 1
@@ -146,6 +151,9 @@ split return a list, partition return a tuple
 
 *count
 -c = collections.Counter(nums)
+
+*bit
+-bin(x)
 
 *enumerate:
 a = ['a','b','c'] 
