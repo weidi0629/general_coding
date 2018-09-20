@@ -95,6 +95,7 @@ int c = 1; c << 1
 -memset ( void * ptr, int value, size_t num )
 ptr: Pointer to the block of memory to fill. value:Value to be set. num: Number of bytes to be set to the value.
 eg. double memo[200][200]; memset(memo, 0, sizeof(memo));
+
 ***Python:
 *list:
 -sum the ele in list:
@@ -142,6 +143,9 @@ split return a list, partition return a tuple
 
 -append a string with chars
 "".join(chr(m[c] + 97) for c in w)  # it's chr, not char!
+
+*count
+-c = collections.Counter(nums)
 
 *enumerate:
 a = ['a','b','c'] 
