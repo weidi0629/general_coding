@@ -119,6 +119,11 @@ projects = sorted(zip(Profits, Capital), key=lambda l: l[1]) # zip return a list
 -sort a list in odd/even position:
 sorted(s[0::2]) / sorted(s[1::2])
 
+-用二维list模拟dic
+bucket = [[] for _ in nums]
+for num,freq in collection.Counter(nums).item():
+    bucket[-freq].append(num)
+
 *set:
 -list to set:
 Set(A)
@@ -167,6 +172,9 @@ emumerate(a) return (0,a);(1,b);(2,c);
 *heapq or heap queue #heap[0] element also returns the smallest element each time
 -push
 heapq.heappush(list, -projects[i][0]) #maintain heap structure in list
+
+*itertolls
+-itertools.chan(*bucket) #bucket 是个二维的list，把里面的chain起来. 
 
 -other op:
 heapify(iter)
