@@ -88,6 +88,10 @@ priority_queue<int> q; // first element is always the greatest
 pair<int,int> p
 p={1,1}
 
+e.g
+priority_queue<pair<int,int>> pq; 
+pq.push(make_pair(a,b))
+
 *bit
 -bitset
 e.g. int x
@@ -151,6 +155,7 @@ split return a list, partition return a tuple
 
 *count
 -c = collections.Counter(nums)
+e.g. [i[0] for i in Counter(nums).most_common(k)]; list(zip(*collections.Counter(nums).most_common(k))))[0]
 
 *bit
 -bin(x)
