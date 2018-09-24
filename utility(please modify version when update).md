@@ -108,7 +108,7 @@ eg. double memo[200][200]; memset(memo, 0, sizeof(memo));
 ***Python:
 *list:
 -sum the ele in list:
-sum(A)
+sum(A); max(A); min(A);
 
 -list is interator:
 [w for w in words if F(w) == F(p)]
