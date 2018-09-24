@@ -1,7 +1,7 @@
 this file records the utilities for use of language of C++ and Python,
 should syncronize with github
 
-update date: 20180919
+update date: 20180924
 
 using vs cmd to compile c++ in windows:
 cl /EHsc hello.cpp   https://msdn.microsoft.com/en-us/library/ms235639.aspx
@@ -179,6 +179,9 @@ heapq.heappush(list, -projects[i][0]) #maintain heap structure in list
 -other op:
 heapify(iter)
 heappop(heap)
+
+二分法寻找
+bisect.bisect(self.times, t) 返回一个key
 
 
 --traversal:
