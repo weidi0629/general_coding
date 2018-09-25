@@ -124,6 +124,8 @@ bucket = [[] for _ in nums]
 for num,freq in collection.Counter(nums).item():
     bucket[-freq].append(num)
 
+-append 和 extend区别
+a=[1,2]  a.append([3,4])  a= [1,2,[3,4]]; a.extend([3,4])  a=[1,2,3,4]
 *set:
 -list to set:
 Set(A)
