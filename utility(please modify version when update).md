@@ -114,7 +114,8 @@ sum(A); max(A); min(A);
 [w for w in words if F(w) == F(p)]
 
 -sort a list with lambda:
-projects = sorted(zip(Profits, Capital), key=lambda l: l[1]) # zip return a list, sort key is 2nd ele in list
+projects = sorted(
+(Profits, Capital), key=lambda l: l[1]) # zip return a list, sort key is 2nd ele in list
 
 -sort a list in odd/even position:
 sorted(s[0::2]) / sorted(s[1::2])
@@ -171,12 +172,17 @@ e.g. [i[0] for i in Counter(nums).most_common(k)]; list(zip(*collections.Counter
 a = ['a','b','c'] 
 emumerate(a) return (0,a);(1,b);(2,c);
 
+*zip 
+一个验证list是否increasing的好办法
+if all(a <= b for a, b in zip(x, x[1:]))
+
 *heapq or heap queue #heap[0] element also returns the smallest element each time
 -push
 heapq.heappush(list, -projects[i][0]) #maintain heap structure in list
 
-*itertolls
+*itertools
 -itertools.chan(*bucket) #bucket 是个二维的list，把里面的chain起来. 
+-itertools.combinations(nums, i) 返回一坨tuple
 
 -other op:
 heapify(iter)
