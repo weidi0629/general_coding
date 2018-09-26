@@ -162,7 +162,7 @@ split return a list, partition return a tuple
 "".join(chr(m[c] + 97) for c in w)  # it's chr, not char!
 
 *count
--c = collections.Counter(nums)
+-c = collections.Counter(nums)  - 类似于c++ 统计每个元素多少个的map
 e.g. [i[0] for i in Counter(nums).most_common(k)]; list(zip(*collections.Counter(nums).most_common(k))))[0]
 
 *bit
