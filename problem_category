@@ -6,3 +6,10 @@
 
 *** 从单个值入手  ***
 #：910
+
+
+
+*** tral and error ***
+let count(num) denote the number of pair distances that are no greater than num, then the K-th smallest pair distance will be the smallest
+integer such that count(num) >= K.
+#:719, 378
