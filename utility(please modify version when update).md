@@ -217,9 +217,18 @@ node = TreeNode(v)
 
 
 numeric:
--get GCD and LCM:
-(a,b)=(A,B) while b>0:(a,b)=(b,a%b)
+--get GCD and LCM:
+-(a,b)=(A,B) while b>0:(a,b)=(b,a%b)
 gcd=a, lcm =A*B/a
+
+-formal function:
+def gcd(a, b):
+    while b: a, b = b, a % b
+    return a
+
+-built in function
+return reduce(fractions.gcd, collections.Counter(deck).values()) > 1
+
 c++ has pre-defined function __gcd(A,B)
 
 - random num (0,n)
