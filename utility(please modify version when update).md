@@ -164,6 +164,8 @@ split return a list, partition return a tuple
 *count
 -c = collections.Counter(nums)  - 类似于c++ 统计每个元素多少个的map
 e.g. [i[0] for i in Counter(nums).most_common(k)]; list(zip(*collections.Counter(nums).most_common(k))))[0]
+- Counter(a).values只要结果 
+count = collections.Counter(deck).values()
 
 *bit
 -bin(x)
