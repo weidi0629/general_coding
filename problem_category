@@ -20,7 +20,7 @@ integer such that count(num) >= K.
 
 
 *** dp, space collapse
-516 
+516 673 *801 
 
 
 *** bit manipulation
