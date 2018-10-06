@@ -27,6 +27,7 @@ integer such that count(num) >= K.
 516-877space collapse, 不知道对不对
 1. 用内部循环的参数做collapse
 2. 如果有 i-1, j-1,的，做用pre暂存
+现在理解了，在大教材的solution 15.4.4
 
 673 *801 
 
