@@ -7,8 +7,10 @@
 大集合
 https://leetcode.com/problems/subsets/discuss/27281/A-general-approach-to-backtracking-questions-in-Java-(Subsets-Permutations-Combination-Sum-Palindrome-Partitioning)
 
+greddy
+
 *** 从单个值入手  ***
-#：910 739
+#：910 739  517 891
 
 
 *** travasal 
@@ -29,7 +31,7 @@ integer such that count(num) >= K.
 2. 如果有 i-1, j-1,的，做用pre暂存
 现在理解了，在大教材的solution 15.4.4
 
-673 *801 
+673 *801 *920一道不是很明显的dp
 
 
 *** bit manipulation
