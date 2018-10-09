@@ -16,7 +16,8 @@ greddy
 *** travasal 
 pre-order left->root->right 
 https://leetcode.com/problems/validate-binary-search-tree/discuss/32112/Learn-one-iterative-inorder-traversal-apply-it-to-multiple-tree-questions-(Java-Solution)
-
+BFS 752 
+DFS 
 
 *** tral and error ***
 let count(num) denote the number of pair distances that are no greater than num, then the K-th smallest pair distance will be the smallest
