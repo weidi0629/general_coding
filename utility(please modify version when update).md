@@ -70,7 +70,7 @@ getline(ss,root,' ')// put ss to root ans stop when meet the delimiting characte
 s.find('(')) // find "bbb"
 s.substr(s.find('(') + 1, s.find(')') - s.find('(') - 1)  // find "ccc"
 
-*map:
+*map: map只能找index，找value要自己编程
 -declare a map:
 unordered_map<char, int> m;
 -for(auto i:m)
