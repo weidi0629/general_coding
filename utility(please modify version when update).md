@@ -1,7 +1,7 @@
 this file records the utilities for use of language of C++ and Python,
 should syncronize with github
 
-update date: 20180924
+update date: 20181127
 
 using vs cmd to compile c++ in windows:
 cl /EHsc hello.cpp   https://msdn.microsoft.com/en-us/library/ms235639.aspx
@@ -82,6 +82,9 @@ m[c] = m.size()
 *queue:
 -define:
 priority_queue<int> q; // first element is always the greatest 
+
+min priority queue
+std::priority_queue<int, std::vector<int>, std::greater<int> > my_min_heap;
 
 *pair 
 -assign
