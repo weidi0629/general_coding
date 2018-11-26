@@ -12,6 +12,6 @@ public TreeNode buildTree(int[] in, int[] post) {
       }
     }
     root.right = helper(post, idx - 1, in, i + 1, end);
-    root.left = helper(post, idx - (end - i  + 1), in, start, i - 1);
+    root.left = helper(post, idx - (end - i  + 1), in, start, i - 1); // 注意i不是一个计数，而是从start开始
     return root;    
   }
