@@ -3,4 +3,6 @@ def findRedundantConnection(self, edges):
     for u, v in edges:
         if tree[u] == tree[v]:
             return [u, v]
-        tree = tree.replace(tree[u], tree[v]) #注意replace返回还是一个string
+        tree = tree.replace(tree[u], tree[v]) #注意replace返回还是一个string,
+        #This method returns a copy of the string with all occurrences of substring old replaced by new. If the optional argument max
+        #is given, only the first count occurrences are replaced.
