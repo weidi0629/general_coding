@@ -24,7 +24,7 @@ public:
                     bld.insert(make_pair(buidlings[i][2],buidlings[i][1]));
                     i++;
                 }
-            }else if(i>=len){ //pop开始了，把x取出后pop掉，如果有比自己小的继续pop,//***错误，缺少cur的保护
+            }else if(i<=len){ //pop开始了，把x取出后pop掉，如果有比自己小的继续pop,//***错误，缺少cur的保护
                 //curx = bld.top().second; ** 错误，这句不要的，跟外面那个句是重复的
                 while(bld.top().second <= curx) bld.pop;
                 
