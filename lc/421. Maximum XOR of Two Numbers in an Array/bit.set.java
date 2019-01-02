@@ -1,3 +1,7 @@
+/*
+这题的另一个重点是，从高位往下寻找，目标的两个数肯定是最先碰到的group里面然后慢慢淘汰成这两个。比如3, 10, 5, 25 -> 00011, 01010, 00101, 11001
+一开始的前两位，3,5,25是一样的，到第三位是3就淘汰下来了。
+*/
 public int findMaximumXOR(int[] nums) {
         int maxResult = 0; 
         int mask = 0;
@@ -27,7 +31,7 @@ public int findMaximumXOR(int[] nums) {
             // which can give me the greedyTry;
             int greedyTry = maxResult | (1 << i);
             
-            for (int leftPartOfNum : set) {
+            for (int leftPartOfNum : set) { // 是在nums里找两个，也就是在set里找两个。
                 //This is the most tricky part, coming from a fact that if a ^ b = c, then a ^ c = b;
                 // now we have the 'c', which is greedyTry, and we have the 'a', which is leftPartOfNum
                 // If we hope the formula a ^ b = c to be valid, then we need the b, 
