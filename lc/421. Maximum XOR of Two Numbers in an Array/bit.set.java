@@ -29,7 +29,7 @@ public int findMaximumXOR(int[] nums) {
             // if i = 1 and before this iteration, the maxResult we have now is 1100, 
             // my wish is the maxResult will grow to 1110, so I will try to find a candidate
             // which can give me the greedyTry;
-            int greedyTry = maxResult | (1 << i);
+            int greedyTry = maxResult | (1 << i); // 这里只加一位，所以不是用mask
             
             for (int leftPartOfNum : set) { // 是在nums里找两个，也就是在set里找两个。
                 //This is the most tricky part, coming from a fact that if a ^ b = c, then a ^ c = b;
