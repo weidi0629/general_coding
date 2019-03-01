@@ -23,7 +23,7 @@ public:
             return m[start][end];
         else if(s.find(end) == s.end){ // 没找到,并且没来过
             for(auto st:m[start]){ // 每个st是以第二个点位key的map
-                s.insert(end)
+                s.insert(st)
                 double tmp = dfs(st,end,m,s);
                 if(tmp)
                     return tmp*st.second; //如果找到了，那递归返回时会一层层乘上去
