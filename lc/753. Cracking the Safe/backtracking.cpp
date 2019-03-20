@@ -17,7 +17,8 @@ public:
                 visited.insert(prev+to_string(i));
                 s = s+to_string(i);
                 if(dfs(s,visited,n,k,total)) return true;
-                //没有找到，归位，注意所有的可能性都要查，所以参数没有向前，回到最原始的位数
+                //没有找到，归位，因为这个数在别人的round里也可能需要
+                //注意所有的可能性都要查，所以参数没有向前，回到最原始的位数
                 else
                 {
                     s = s.substr(0,s.size()-1);
