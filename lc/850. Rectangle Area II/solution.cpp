@@ -39,7 +39,7 @@ public:
             area += (y-currenty) * currentx;
             currenty =y;
             // 开始搞currentx了，先在这一把内给count计数，注意这一把内可能还有其他长方形的x,所以要for loop里面所有的
-            for(int i=x_i[x0]; i< x_i[x1]; i++)
+            for(int i=x_i[x0]; i< x_i[x1]; i++) // 取得 i
                 count[i] += sig;
             currentx =0;
             for(int i=0;i<x.size();i++){  // 从这里开始要遍历所有的x，因为长方形多，每层都要加加减减做统计
