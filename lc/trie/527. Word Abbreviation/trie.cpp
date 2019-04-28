@@ -2,14 +2,12 @@
   1. 没有定义正规的add, search 方程，直接在内部遍历trie了
   2. 注意 make_shared的用法 
 */
-
+struct Trie {
+    shared_ptr<Trie> child[26];
+    int count{0};   
+};
 
 class Solution {
-    struct Trie {
-        shared_ptr<Trie> child[26];
-        int count{0};
-        }
-    };
 public:
     vector<string> wordsAbbreviation(vector<string>& dict) {
         unordered_map<string, vector<int>> group;
