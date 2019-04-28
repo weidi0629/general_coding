@@ -1,6 +1,6 @@
 /*
   1. 没有定义正规的add, search 方程，直接在内部遍历trie了
-  
+  2. 注意 make_shared的用法 
 */
 
 
@@ -20,9 +20,9 @@ public:
         }
         
         vector<string> result(dict.size());
-        for (auto &p:group) {
+        for (auto &p:group) { // & 还是means ref 
             auto trie = make_shared<Trie>();
-            for (int i:p.second) {
+            for (int i:p.second) {  // i is index 
                 auto ptr = trie;
                 for (char c:dict[i]) {
                     if (ptr->child[c-'a'] == nullptr) ptr->child[c-'a'] = make_shared<Trie>();
