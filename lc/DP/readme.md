@@ -6,5 +6,6 @@
   - 3. Compute the value of an optimal solution, typically in a bottom-up fashion.
 -- optimal substructure: 
   - optimal solutions to a problem incorporate optimal solutions to related subproblems, which we may solve independently.
--- time-memory trade-off 
-  - as long as distinct problem is in ploynomial size 
+-- time-memory trade-off: as long as distinct problem is in ploynomial size 
+
+pending 367 subproblem graphs 
