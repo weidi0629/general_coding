@@ -8,4 +8,5 @@
   - optimal solutions to a problem incorporate optimal solutions to related subproblems, which we may solve independently.
 -- time-memory trade-off: as long as distinct problem is in ploynomial size 
 
-pending 367 subproblem graphs 
+ 
+pending step 1 page 373
