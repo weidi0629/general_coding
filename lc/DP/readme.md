@@ -17,5 +17,13 @@
      ...
    注意这个 l 是 i->j的长度，l ==0 时，也就是没有乘法，所以都是0. 剩下的从2开始算。 
 
+-- common patterns:
+1. show the problem is about to make a choice, this choice leads more subproblem 
+2. this choice lead to optimal suolution
+3. 如何定义subproblem space 
+4. "cut and paste" suppose subproblem is not optimal, 取好的留差的，也就是DP 公式
 
-pending step 1 page 373
+-- informally, 时间复杂度是 # of choice, and how many subproblem 
+  - the cost itself, 比如cutting rod 里的pi， matrix multiplication里的 pi-1 * pk * pj
+
+pending subtleties page 381
