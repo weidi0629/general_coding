@@ -26,4 +26,11 @@
 -- informally, 时间复杂度是 # of choice, and how many subproblem 
   - the cost itself, 比如cutting rod 里的pi， matrix multiplication里的 pi-1 * pk * pj
 
-pending subtleties page 381
+-- different between normal DP and NP hard
+  - the subproblems are not independent. e.g longest and shortest sub path  
+  
+-- overlappin subproblems
+  - different from divide and conqur 
+  
+  
+pending 390 15.4
