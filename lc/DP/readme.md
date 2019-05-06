@@ -31,6 +31,13 @@
   
 -- overlappin subproblems
   - different from divide and conqur 
+
+-- 15.4 LCS
+-- 关键的theorem 
+Let X =  <x1, x2, ... xm> and Y = <y1, y2 .... ym> be sequences, and let Z = <z1, z2 .. zk>be any LCS of X and Y .
+1. If xm = yn, then zk = xm = yn and Zk-1 is an LCS of Xm-1 and Yn-1.
+2. If xm != yn, then zk != xm implies that Z is an LCS of Xm-1 and Y .
+3. If xm != yn, then zk != yn implies that Z is an LCS of X and Yn-1.
+
   
-  
-pending 390 15.4
+pending 397 15.5
