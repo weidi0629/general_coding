@@ -39,5 +39,9 @@ Let X =  <x1, x2, ... xm> and Y = <y1, y2 .... ym> be sequences, and let Z = <z1
 2. If xm != yn, then zk != xm implies that Z is an LCS of Xm-1 and Y .
 3. If xm != yn, then zk != yn implies that Z is an LCS of X and Yn-1.
 
-  
-pending 397 15.5
+2D -> 1D 习题15.4.4
+如果 dp[i][j] 只跟 dp[i-1][j-1] dp[i][j-1] dp[i-1][j]
+只要定义一个 dp[j], j 之前的数是本轮已经更新过的，j开始到最后（包括 j）是之前一轮的，现在要更新的。唯一一个就是 dp[i-1][j-1], 也就是更新完的 dp[j], 每次开始前要寄存掉，不然无处安放。
+
+
+
