@@ -18,3 +18,10 @@ Preprocessing of text may become costly if the text changes frequently. It is go
   - Consider all suffixes as individual words and build a compressed trie.
   
 - 然后就是用pattern 在compressed tree里面找
+
+
+- 之后的引申
+KMP Algorithm
+Rabin Karp Algorithm
+Finite Automata based Algorithm
+Boyer Moore Algorithm
