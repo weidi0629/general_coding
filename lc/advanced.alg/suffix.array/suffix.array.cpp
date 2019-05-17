@@ -218,6 +218,19 @@ int *buildSuffixArray(char *txt, int n)
 			ind[suffixes[i].index] = i; 
 		} 
 		
+		/*
+		  这里有个非常tricky的地方： 小的index加多少，就是那个index对应的string. 比如banana index是0， 加上2之后，就是banana第二个字符
+		  开始的nana, 也就是index =2 的string. 所以上门ind就是一个记录之前的index现在在suffixes数组里的第几个。也就是大组分好里面分小组，
+		  利用了这个tricky的性质，小组已经在分大组时分好了。在此体会下之前tutoril里说的：
+		  The idea is to use the fact that strings that are to be sorted are suffixes of a single string.
+		  
+		  Index       Suffix           
+		  5          a                
+		  1          anana               
+		  3          ana             
+		  0          banana           
+		  2          nana             
+		  4          na             	  
 		*/
 
 		// Assign next rank to every suffix 
