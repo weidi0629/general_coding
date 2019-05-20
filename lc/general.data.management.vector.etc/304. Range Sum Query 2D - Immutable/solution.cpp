@@ -1,5 +1,5 @@
 /*
-关键是这个sum[i][j]矩阵记录着矩阵 i-1, j-1的面积。从小到大慢慢记录，这点非常重要。
+关键是这个sum[i][j]矩阵记录着矩阵 i-1, j-1的面积之和。从小到大慢慢记录，有点像prefix，这点非常重要。
 https://leetcode.com/problems/range-sum-query-2d-immutable/discuss/75350/Clean-C%2B%2B-Solution-and-Explaination-O(mn)-space-with-O(1)-time
 */
 
