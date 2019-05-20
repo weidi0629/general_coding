@@ -150,15 +150,18 @@ vector<int> kasai(string txt, vector<int> suffixArr)
 
 		/* j contains index of the next substring to 
 		be considered to compare with the present 
-		substring, i.e., next string in suffix array */
+		substring, i.e., next string in suffix array 
+		 把第几个与位数的互换。注意后面存的是 invSuff[i].
+		 比如从i=0开始，banana, 用invSuff[0] 找到banana在原来的数组中是第3位，然后+1找到后面那个是什么（算法是跟sufffix[i+1]做比较）*/
 		int j = suffixArr[invSuff[i]+1]; 
 
 		// Directly start matching from k'th index as 
 		// at-least k-1 characters will match 
+		// 这个算法主要就是这步，为了直接用txt来比较，space可以优化
 		while (i+k<n && j+k<n && txt[i+k]==txt[j+k]) 
 			k++; 
 
-		lcp[invSuff[i]] = k; // lcp for the present suffix. 
+		lcp[invSuff[i]] = k; // 注意这里不是存i, 而是存 invSuff[i].  
 
 		// Deleting the starting character from the string. 
 		if (k>0) 
