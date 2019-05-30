@@ -1,3 +1,5 @@
+看这题原因是 215 kth largest number 
+
 很像 full binary tree 
 
 array A with two attributes:
