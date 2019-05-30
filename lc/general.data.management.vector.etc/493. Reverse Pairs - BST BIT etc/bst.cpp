@@ -10,13 +10,13 @@ public:
         }
     }
     
-    int search(*node root, int val){
+    int search(node* root, int val){
         if(!root) return 0;
         if(root->val == val) return val;
         else if(root->val < val){
             return search(root->right,val);
         }else{
-            return root->val + search(root->left,val); 
+            return root->val + search(root->left,val); // (1)
         }
     }
     
@@ -29,7 +29,7 @@ public:
         else if(root->val == val)
             root->val++;
         else if(root->val < val){
-            root->val++; 
+            root->val++; //比自己的大，就帮他记录了，所以在search (1) 时，如果发现node->val > val,直接到node左边找就行了，因为比自己大的已经记录了
             root->right = insert(root->right,val);
         }else{                 
             root->left = insert(root->left,val);
