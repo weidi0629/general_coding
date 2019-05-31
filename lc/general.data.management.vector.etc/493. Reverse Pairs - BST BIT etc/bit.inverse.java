@@ -30,6 +30,14 @@ so we can use getSum(MaxNumberOfValue) - getSum(index(2*nums[j])) to get the num
 Another possible way is just like @fun4LeetCode implements,
 we can reverse the direction for insert and search in BIT
 so what we get is always the number greater than query values by using single search method.
+
+
+
+原始的BIT 是 origianl arr -> bit array 
+这题改为 original arr -> 排序过的 arr -> bit   
+1) bit 如上面所述，只需要记录个数。 
+2) ele 是按 origianl arr 的顺序来的，所以就算找到的index是在original arr 位置后面的，没关系，因为bit里面根本没有插进去过 -- bit插入的顺序是按
+ele的顺序
 */
 
 private int search(int[] bit, int i) {
@@ -58,8 +66,8 @@ public int reversePairs(int[] nums) {
     Arrays.sort(copy);
     
     for (int ele : nums) {
-        res += search(bit, index(copy, 2L * ele + 1));
-        insert(bit, index(copy, ele));
+        res += search(bit, index(copy, 2L * ele + 1)); // 1)
+        insert(bit, index(copy, ele));  // 2) 
     }
     
     return res;
