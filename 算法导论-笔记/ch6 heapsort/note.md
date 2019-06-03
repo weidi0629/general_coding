@@ -47,7 +47,7 @@ BUILD-MAX-HEAP(A)
 3   MAX-HEAPIFY(A,i)
 
 
-
+pending 6.4 heapsort algoithm 
 
 
 
