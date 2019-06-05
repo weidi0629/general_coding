@@ -1,3 +1,8 @@
+/*
+详细的解释在:
+https://leetcode.com/problems/find-k-th-smallest-pair-distance/discuss/109082/Approach-the-problem-using-the-%22trial-and-error%22-algorithm
+*/
+
 public int smallestDistancePair(int[] nums, int k) {
     Arrays.sort(nums);
     
