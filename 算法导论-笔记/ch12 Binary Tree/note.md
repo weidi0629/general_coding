@@ -20,6 +20,50 @@
     return y
     
      
+12.3 Insertion and deletion
+-- insertion 
+  //一路杀到最下面，然后看放在左边还是右边 
+  TREE-INSERT(T,z)
+  1 y = NIL
+  2 x = T.root
+  3 while x ¤ NIL
+  4   y = x
+  5   if z.key < x.key
+  6     x = x.left
+  7   else x = x.right
+  8 z.p = y
+  9 if y == NIL
+  10  T.root =z // tree T was empty
+  11 elseif z.key < y.key
+  12  y.left = z
+  13 else y.right = z 
+  
+-- Deletion 
+  - most tricky part is:
+    - if y is z's right child, then we replace z by y, leaving y's right child alone. 
+    
+    - y(successor) lies within z's right subtree but is not z's right child, in this case, we first replace y by its own right child, and       then we replace z by y.
+
+    - alg:
+      TREE-DELETE(T,z)
+      1 if z.left == NIL
+      2   TRANSPLANT(T,z,z.right)
+      3 elseif z.right == NIL
+      4   TRANSPLANT(T,z,z.left)
+      5 else y = TREE-MINIMUM(z.right)
+      6   if y.p != z
+      7     TRANSPLANT(T, y, y.right)
+      8     y.right = z.right
+      9     y.right.p = y
+      10  TRANSPLANT(T,z,y)
+      11    y.left = z.left
+      12    y.left.p =  y
+
+
+
+
+
+
 
 
 
