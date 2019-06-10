@@ -1,3 +1,7 @@
+/*
+先计数每个出现过的次数。然后遍历每一个，从‘结果’的后面往前，如果符合条件（新的比结果最后一个小，并且最后一个后面还有），就把最后一个炸了。
+*/
+
 class Solution {
 public:
     string removeDuplicateLetters(string s) {
