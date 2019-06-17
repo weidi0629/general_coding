@@ -40,7 +40,7 @@ LEFT-ROTATE(T, x)
     - Z is the root， 因红黑树要保证root 是黑色的
     - red node cannot has red child 
 
-
+pending deletion 
 
 
 
