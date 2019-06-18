@@ -1,3 +1,8 @@
+/*
+In this solution, I use dp to record the achievable sum of the smaller group.
+dp[x] = 1 means the sum x is possible.
+*/
+
 int lastStoneWeightII(vector<int> A) {
         bitset<1501> dp = {1};
         int sumA = 0, res = 100;
