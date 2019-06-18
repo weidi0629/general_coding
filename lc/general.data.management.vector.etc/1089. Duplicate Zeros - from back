@@ -1,0 +1,11 @@
+/*
+这题说是 easy but not that easy, 看下面的注释
+*/
+
+void duplicateZeros(vector<int>& a, int i = 0, int sh = 0) {
+  for (i = 0; sh + i < a.size(); ++i) sh += a[i] == 0; // 算一下有多少个位需要 shift, 注意 i 是提早结束的 
+  for (i = i - 1; sh > 0; --i) {  //从后面开始
+    if (i + sh < a.size()) a[i + sh] = a[i]; // 常规的变化 
+    if (a[i] == 0) a[i + --sh] = a[i]; // 有一个零，就少一位shift （可以用这个办法来简单测试）
+  }
+}
