@@ -1,0 +1,20 @@
+-- good at working on disk or secondary strorage devices. 
+  - minimize disk IO 
+  
+-- Data structures on secondary storage
+
+-- The B-tree algorithms copy selected pages from disk into main memory as needed and write back onto disk the pages that have changed.
+
+
+-- 18.1 Definition of B-trees 
+  - each node
+    - x.n, # of keys stored in the node 
+    - n+1 pointer c1..cn+1 point to childern 
+    - 上面的key 是subtree的分割
+    - all leaves have the same depth 
+    - t>=2 minimum degree
+    - h <= logt(n+1)/2  n key, t minimun degree 
+      - 因为是logt, 所以数是胖矮行的，avoid a substantial number of disk accesses.
+    
+    
+    18.2 Basic operations on B-trees
