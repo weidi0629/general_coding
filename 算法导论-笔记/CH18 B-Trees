@@ -17,4 +17,18 @@
       - 因为是logt, 所以数是胖矮行的，avoid a substantial number of disk accesses.
     
     
-    18.2 Basic operations on B-trees
+###    18.2 Basic operations on B-trees  ### 
+
+-- root always in the main memory 
+
+-- searching B-tree 
+  - we make an (x.n+1)-way branching decision
+  
+  B tree search 
+  -- 利用了上面18.1, 上面的key是下面subtree的分割这个条件 
+
+-- Creating an empty B-tree
+  - ALLOCATE-NODE allocate a page in disk 
+  
+-- Inserting a key into a B-tree
+  - 图比较直观 
