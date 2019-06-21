@@ -33,4 +33,14 @@
 -- Inserting a key into a B-tree
   - 图比较直观 
 
-pending Inserting a key into a B-tree in a single pass down the tree 
+-- Inserting a key into a B-tree in a single pass down the tree 
+  - 一路insert下去，只要有满的就split掉 
+
+
+-- 18.3 Deleteing a key from a B-tree 
+  - guarantee that whenever it calls itself recursively on a node x, the number of keys in x is at least the minimum degree t
+
+  - Since most of the keys in a B-tree are in the leaves, we may expect that in practice, deletion operations are most often used to delete keys from leaves
+
+
+
