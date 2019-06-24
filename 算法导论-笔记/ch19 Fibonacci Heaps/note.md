@@ -1,0 +1,3 @@
+-- Mergeable Heaps 
+  - 除了 extract-min and delete is O(lg n), 其他都是 O(1)
+  - 主要是union这个操作， binary heap O(n) 而 Fibonacci take O(1)
