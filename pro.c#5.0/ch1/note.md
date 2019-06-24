@@ -25,4 +25,4 @@
   - vc vb ..不同的language， 如果想通的方程，最后CIL 编译成相同的输出
   
   
-  pending The Role of .NET Type Metadata page 12
+  pending Understanding the Common Language Specification page 18
