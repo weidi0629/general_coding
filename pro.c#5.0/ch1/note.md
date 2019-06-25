@@ -25,4 +25,29 @@
   - vc vb ..不同的language， 如果想通的方程，最后CIL 编译成相同的输出
   
   
-  pending Understanding the Common Language Specification page 18
+-- Understanding the Common Language Specification page 18
+  - minimal and complete set of features a given .NET-aware compiler must support
+  - subset of CTS
+  
+-- CLR common language runtime
+  - difference with JVM and others: 
+    - well defined runtime layer that is shared by all languages and platforms that are .NET-aware
+    -First and foremost, it is the agent in charge of resolving the location of an assembly and finding the requested type within the            binary by reading the contained metadata
+    
+    
+    -- The Assembly/Namespace/Type Distinction
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
