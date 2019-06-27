@@ -36,8 +36,22 @@
     
     
     -- The Assembly/Namespace/Type Distinction
-    
-    
+      - namespace 为了区分大家
+      - GAC - A vast majority of the .NET Framework assemblies are located under a specific directory termed the global assembly cache            (GAC）
+      
+    -- Exploring an Assembly Using ildasm.exe
+      - 可以看系统的assembly是干嘛的
+      - 还能看 CIL， metadata
+      
+    -- The Platform-Independent Nature of .NET
+      - 可以在各种系统上跑 
+      
+      
+      pending ch2
+      
+      
+      
+      
     
     
     
