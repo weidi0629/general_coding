@@ -44,14 +44,33 @@
     - you disable the processing of a literal’s escape characters and print out a string as is.
     - 双引号 单引号 \\都可以打出来 
     
-pending Strings and Equality 
+ -- Strings and Equality 
+    - 一般的操作是建立一个copy of original string, 如果操作不好就会有资源浪费。 
     
+    -- The System.Text.StringBuilder Type - more efficient way 
+      - 直接操作！ 快
     
+  -- Narrowing and Widening Data Type Conversions
+    - narrow 会报错 
+      - explicitly cast short answer = (short)Add(numb1, numb2);
+      - using checked keyword to check if loss data  
+      - byte sum = checked((byte)Add(b1, b2)) 跟 exception 合用 
+      - Setting Project-Wide Overflow Checking
+         - advanced botton 
+      - unchecked 
+        - 如果全局设定了overflow不行，一小部分是可以的，就用 unchecked
+        
+  -- Understanding Implicitly Typed Local Variables - var 
+    - restrictions and limitation
+       -implicit typing applies only to local variables in a method or property scope
+      - no return type, parameters, field data of a custom type
+      - must assign some value 
+      
+      -- Implicit Typed Data Is Strongly Typed Data
+        - 一旦指定是这个type就不能换了。 
     
-    
-    
-    
-    
+      -- when/how to use 
+         - LINQ
     
     
     
