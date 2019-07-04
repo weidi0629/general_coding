@@ -25,6 +25,55 @@
         - static void DisplayFancyMessage(ConsoleColor textColor, ConsoleColor backgroundColor, string message) 
         - usage:  DisplayFancyMessage(message: "Wow! Very Fancy indeed!",  textColor: ConsoleColor.DarkRed, 
        - 放在正常的parameter之后
-       
-       
-       pending -- Understanding C# Arrays
+        
+    -- Understanding C# Arrays
+      - 可以直接初始 bool[] boolArray = { false, false, true }; 
+      - 因为system obj是所有obj的源，所以object[] myObjects = new object[4] 这种什么都可以装：  myObjects[0] = 10;myObjects[1] = false;
+
+      -- Arrays As Arguments or Return Values
+        - void PrintArray(int[] myInts) 
+
+
+    -- Understanding the enum Type
+      - 可以改变enum type: enum EmpType : byte
+        - 可以用Enum.GetUnderlyingType()来取得它的type
+      - enum.to_string可以显示enum的名字 
+      -  GetValues() return a system.array, each element is name/value pair
+        - Array enumData = Enum.GetValues(e.GetType());
+        
+    -- Understanding the Structure Type 
+       - well suited for modeling mathematical, geometrical, and other “atomic” entities
+       - no inheritance 
+       - using default constructor -- all parameters are assign to defualt values 
+          - Point p1 = new Point(); 
+          
+    -- Understanding Value Types and Reference Types
+      - structure defirved from system.valueType - value based! 
+      - it's on the stack 
+        - stack - lift time short,
+        - heap - monitro by many factors, garbage-collected 
+      - when outof the scope, remove quickly 
+      - 如果是class 就都是ref type 重要！ 
+      - 如果structure里面包含了class, copy之后，里面的class会指向同一个ref (i.e., a shallow copy)
+    
+    
+    
+    pending -- Passing Reference Types by Value 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+
+
+
+
+
