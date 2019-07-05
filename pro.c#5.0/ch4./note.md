@@ -56,12 +56,22 @@
       - 如果是class 就都是ref type 重要！ 
       - 如果structure里面包含了class, copy之后，里面的class会指向同一个ref (i.e., a shallow copy)
     
+    -- Passing Reference Types by Value 
+      -  a copy of the reference to the caller’s object
+        -  void SendAPersonByValue(Person p) 像这种方程是会改变原来的值的
     
-    
-    pending -- Passing Reference Types by Value 
-    
-    
-    
+    -- Passing Reference Types by Reference 
+      -完全改掉了，并且还能重新赋值
+        - void SendAPersonByReference(ref Person p) {
+              p = new Person("Nikki", 999); 
+
+    -- Understanding C# Nullable Types
+      - null: estabilish an empty object reference 
+      - ? only applied to value type 
+         - int? nullableInt = 10;
+         - 就是说这个值可以是null的，访问database时好用
+      - ?? - 如果是null的就赋一个默认值
+         - int myData = dr.GetIntFromDatabase() ?? 100;
     
     
     
