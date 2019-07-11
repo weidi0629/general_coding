@@ -47,6 +47,30 @@
         - 如果是class就是null 
           - 需要在constructor里初始这个obj. page 198
     
+    --  Working with Constant Field Data
+      - const is implicitly static
+      - the initial value assigned to the constant must be specified at the time you define the constant
+    
+    -- Understanding Read-Only Fields
+      - 跟const 一样： cannot be changed after the initial assignment.
+      - 跟const 不一样： assign的value可以在runtime 赋值，所以可以加在constructor里面
+      -- 跟const 不一样： 不是implicitly const的 
+    
+    -- Understanding Partial Types
+      - partial class Employee {.. 可以把class分别写进好几个文件中 
+      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
