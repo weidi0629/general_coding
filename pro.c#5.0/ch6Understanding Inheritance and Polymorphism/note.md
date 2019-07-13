@@ -22,3 +22,10 @@
     -  public override void GiveBonus(float amount)
     - 仍可以用base里面的method,只要加 base. 就行 
       -base.GiveBonus(amount); 
+  -- Sealing Virtual Members
+    - public override sealed void GiveBonus(float amount)
+      - derived class 就不能再extend这个方程了 
+      
+      
+-- pending Understanding Abstract Classes
+    
