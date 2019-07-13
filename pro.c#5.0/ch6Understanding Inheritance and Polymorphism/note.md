@@ -15,4 +15,10 @@
     - 记得redefine default const, if you define the custom cont 
     
     
--- Keeping Family Secrets: The protected Keyword
+-- C#’s Polymorphic
+  -- base class, 如果会可能override, 加virtual 关键词 
+    - public virtual void GiveBonus
+  -- subclass 要加 override 关键词 
+    -  public override void GiveBonus(float amount)
+    - 仍可以用base里面的method,只要加 base. 就行 
+      -base.GiveBonus(amount); 
