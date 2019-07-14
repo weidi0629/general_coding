@@ -25,7 +25,34 @@
   -- Sealing Virtual Members
     - public override sealed void GiveBonus(float amount)
       - derived class 就不能再extend这个方程了 
-      
-      
--- pending Understanding Abstract Classes
+            
+  -- Understanding Abstract Classes
+    - abstract - 加了之后就不能实例化了
+      - abstract partial class Employee
+    
+  -- Understanding the Polymorphic Interface
+    - 在base class 中定义abstract method, 就一定要求derived class implement
+      public abstract void Draw();
+    - Abstract methods can only be defined in abstract classes
+    
+  -- member shadowing     
+    - 用 new 来把base的定义藏起来
+  
+  -- Understanding Base Class/Derived Class Casting Rules
+    -- 高一级的class可以take 低一级的class -- c++里重要的oop知识点
+      - Employee moonUnit = new Manager("
+      - object frank = new Manager
+    -- 用法：
+      - static void GivePromotion(Employee emp) 所有employee的derived class 都可以进去 
+    
+    - explicit cast
+      - 原因： object frank = new Manager 因为是object， 所以不能传进 GivePromotion(Employee emp)
+      - explicit cast用法： (ClassIWantToCastTo)referenceIHave
+        - GivePromotion((Manager)frank);
+    
+    
+    pending The C# as Keyword
+    
+    
+    
     
