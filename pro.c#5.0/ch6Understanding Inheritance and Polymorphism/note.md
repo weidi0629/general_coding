@@ -51,7 +51,36 @@
         - GivePromotion((Manager)frank);
     
     
-    pending The C# as Keyword
+  -- The C# as Keyword
+    -- as 可以查obj是否是null 
+    
+    -- is 可以比较obj，返回true false 
+      - if (emp is SalesPerson)
+      
+    -- overrideing system.object.ToString()
+      - every obj derived from system.Object
+        - 对于debug来说非常方便 
+        
+    -- overrideing system.object.Equals()
+      - make safty check 保证比较的obj是正确的
+        - if (obj is Person && obj != null)
+        - 可以用ToString做个shortcut 
+      
+    -- Overriding System.Object.GetHashCode()
+        - 可以得到一个代表obj的id 
+        - 可以使用你的class里有唯一性的string，比如ssn
+          -  public override int GetHashCode(){
+                return SSN.GetHashCode(); // string有内置的GetHashCode()
+      
+    -- The Static Members of System.Object
+      - object.Equals(p3, p4)); // object level 
+      - object.ReferenceEquals(p3, p4));  // ref level 
+      
+      
+      
+      
+      
+    
     
     
     
