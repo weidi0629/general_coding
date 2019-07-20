@@ -25,5 +25,23 @@
   - 看下这章的一堆要求 
 
 
--- pending 
+-- handling multiple exceptions 
+  - will be processed by the "first available" catch 
+    - make sure the first catch is most specific one
 
+--General catch Statements
+  - 直接加 catch, 没有特别的指定 ex种类，是非常general的方法 
+  
+-- Rethrowing Exceptions
+  - throw 在catch block里面 
+  
+-- Inner Exceptions
+  - 在处理ex时又出现ex-- 重新建立一个跟原来一样ex，重新throw 
+  
+-- finally Block
+  - a set of code statements will always execute
+  
+  
+  
+  
+  
