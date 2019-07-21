@@ -25,18 +25,36 @@
     - is keyword: return false 
       - if(myShapes[i] is IPointy)
     
+-- Interfaces As Parameters
+    - interface is a valid .net type, can be used as parameter    
+    - 注意，方程如果接受的parameter是interface，但传进去的是object
     
-   pending  Interfaces As Parameters
+-- Interfaces As Return Values
+  - 要把obj进行一个转换 return s as IPointy;
     
+-- Arrays of Interface Types
+  - 即使不同的class只要定义了一样的interface,就可以放在一个array里 
     
-    
-    
-    
-    
-    
-    
-    
-    
+-- Explicit Interface Implementation
+  - 因为class可以implement任意个数的interface，如果每个interface里的方程名字一样怎么办？
+  - 明确表示：implement时
+    - void IDrawToForm.Draw(){
+          Console.WriteLine("Drawing to form...");
+    - 不要加accesor，automatically private 
+      - 不能再ojb时直接用 . 来call，要explicit cast 
+        - ((IDrawToPrinter)oct).Draw();
+  
+-- Designing Interface Hierarchies
+  -- 也可以inherits from existing interface
+  -- can be useful when you want to extend the functionality of an existing interface without breaking existing code bases
+  -- implement时从最下到最上都要implement     
+  -- usage
+    - obj level: myBitmap.DrawInBoundingBox(10, 10, 100, 150);
+    - explict cast IAdvancedDraw iAdvDraw = myBitmap as IAdvancedDraw;
+      
+      
+      
+      pending  Multiple Inheritance with Interface Types
     
     
     
