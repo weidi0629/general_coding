@@ -65,15 +65,17 @@
     - 可以一个个慢慢定义public interface IEnumerator里面所有的method,但最好delegate到array
       - return carArray.GetEnumerator();
     
---  Building Iterator Methods with the yield Keyword
-  - foreach (Car c in carArray{
-      yield return c;
+  --  Building Iterator Methods with the yield Keyword
+    - foreach (Car c in carArray{
+        yield return c;
     
 
--- pending building a named interator
+  -- Building a named interator
+    - can take any number of arguments
+      - public IEnumerable GetTheCars(bool ReturnRevesed)
     
     
-    
+--  The ICloneable Interface
     
     
     
