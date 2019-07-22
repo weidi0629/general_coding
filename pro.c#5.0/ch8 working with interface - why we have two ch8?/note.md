@@ -76,9 +76,35 @@
     
     
 --  The ICloneable Interface
+    -- 一般class都是都是ref type， 如果要返回自身的一个value type怎么办 
+      - public interface ICloneable{
+          object Clone();
+      - this.MemberwiseClone(); 是一个简单的做法，但是要保证member 里面没有ref(比如 class inside class)
+      - 如果有的话： you might want to create a new object that takes into account each reference type member variable, in order to get a “deep copy.”
+      
+-- The IComparable Interface
+  - 有这个就可以sort based on some specified key 
+    - public interface IComparable{
+        int CompareTo(object o);
+        o.id > this.id return 1/0/-1
+    - 可以利用member本身就有的CompareTo interface
+      - return this.CarID.CompareTo(temp.CarID);
+
+    -- Specifying Multiple Sort Orders with IComparer
+      - interface IComparer{
+          - int Compare(object o1, object o2);
+      - 一般是用在helper class里面， 有点像C++里面的callerable     
+        - Array.Sort(myAutos, new PetNameComparer());
+        - 或者直接放在class 定义里面 
+          - 定义时
+            public static IComparer SortByPetName
+                { get { return (IComparer)new PetNameComparer(); } }
+          - 使用时
+              Array.Sort(myAutos, Car.SortByPetName);
+
+
     
-    
-    
+      
     
     
     
