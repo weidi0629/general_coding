@@ -51,10 +51,37 @@
   -- usage
     - obj level: myBitmap.DrawInBoundingBox(10, 10, 100, 150);
     - explict cast IAdvancedDraw iAdvDraw = myBitmap as IAdvancedDraw;
-      
-      
-      
-      pending  Multiple Inheritance with Interface Types
+            
+--Multiple Inheritance with Interface Types
+  -- 直接定义: interface IShape : IDrawable, IPrintable
+    - 现在因为三个里面都有draw(), 可以顶一个笼统的draw(), 也可以explict cast 
+      - void IDrawable.Draw()
+    
+### 概念完了，现在说c#内置的interface ###
+
+-- The IEnumerable and IEnumerator Interfaces
+  - 只要implement GetEnumerator()的都可以用 foreach 
+    - foreach 指向subitem
+    - 可以一个个慢慢定义public interface IEnumerator里面所有的method,但最好delegate到array
+      - return carArray.GetEnumerator();
+    
+--  Building Iterator Methods with the yield Keyword
+  - foreach (Car c in carArray{
+      yield return c;
+    
+
+-- pending building a named interator
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
