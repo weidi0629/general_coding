@@ -5,6 +5,7 @@
   - need to specify 'type of type'
 
 -- The Problems of Nongeneric Collections
+
   -- performance
     - 题外话： stack heap的区别
       - stack 是放local variable，跟 algorithm里的stack不一样
@@ -14,11 +15,13 @@
       - object boxedInt = myInt;
 
     - ArrayList is operating on object, so boxing/unboxing 好几次 
+    
+  -- The Issue of Type Safety
+  
+    - ArrayList 什么东西都可以加进去, 如果要保证container里面都要一样的type, 必须自己constomize一个class 
   
   
-  
-  
-  
+pending -   A First Look at Generic Collections
   
   
   
