@@ -20,9 +20,16 @@
   
     - ArrayList 什么东西都可以加进去, 如果要保证container里面都要一样的type, 必须自己constomize一个class 
   
-  
-pending -   A First Look at Generic Collections
-  
-  
+--   A First Look at Generic Collections
+  -- use the generic version interface IComparable<T>
   
   
+-- The System.Collections.ObjectModel Namespace
+  
+  -- Working with ObservableCollection<T>
+     - CollectionChanged will fire whenever a new item is inserted, a current item is removed (or relocated), or if the entire collection is modified.
+     - public enum NotifyCollectionChangedAction 定义哪个action
+     - NotifyCollectionChangedEventArgs has two important properties: OldItems and NewItems.
+  
+  
+  pending page 341 
