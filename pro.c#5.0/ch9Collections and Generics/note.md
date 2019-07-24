@@ -31,5 +31,24 @@
      - public enum NotifyCollectionChangedAction 定义哪个action
      - NotifyCollectionChangedEventArgs has two important properties: OldItems and NewItems.
   
+-- Custom Generic  
+
+  -- Creating Custom Generic Methods
+    - 一个好习惯是把type写出来 
+
+  -- Creating Custom Generic Structures and Classes 
   
-  pending page 341 
+  -- pending The default Keyword in Generic Code
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
