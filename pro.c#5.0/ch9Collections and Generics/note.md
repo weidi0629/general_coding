@@ -38,12 +38,15 @@
 
   -- Creating Custom Generic Structures and Classes 
   
-  -- pending The default Keyword in Generic Code
+  -- The default Keyword in Generic Code
+    - X = default(T); 
+      - 因为不知道T是什么，所以保证会reset成默认的值
   
+-- Constraining Type Parameters - where key word
+  - 比如要确保 T 是有 default constructor的 
+    - public class MyGenericClass<T> where T : new()
   
-  
-  
-  
+  -- 目前的generic 可能不知道 +-*/ 
   
   
   
