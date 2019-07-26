@@ -48,8 +48,9 @@
   
   -- 目前的generic 可能不知道 +-*/ 
   
-  
-  
+-- Sending Object State Notifications Using Delegates - a more realistic example 
+  - 
+  pending Enabling Multicasting
   
   
   
