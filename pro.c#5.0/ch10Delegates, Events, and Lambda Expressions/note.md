@@ -1,3 +1,5 @@
+-- 整个delegate的意思就是。让某个class/obj 去跑，跑到某一个特定状态就运行一个程序做个特别的程序（最简单就是打在屏幕上）。 这个程序就叫callback。 
+
 -- Understanding the .NET Delegate Type
   - In essence, a delegate is a type-safe object that points to another method (or possibly a list of methods) in the application, 
     which can be invoked at a later time.
@@ -31,13 +33,16 @@
     
 -- Listening to Incoming Events
 
-pending Creating Custom Event Arguments
+-- Creating Custom Event Arguments
 
+-- The Generic EventHandler<T> Delegate
+  - T 表示任意定义的type，也是系统做好的一个obj
 
+-- Understanding C# Anonymous Methods
 
+  - 就类似于直接定义。 定义结束后要加分号结束。 
 
-
-
+pending 381 Accessing Local Variables
 
 
 
