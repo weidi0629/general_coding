@@ -39,10 +39,12 @@
   - T 表示任意定义的type，也是系统做好的一个obj
 
 -- Understanding C# Anonymous Methods
-
   - 就类似于直接定义。 定义结束后要加分号结束。 
 
-pending 381 Accessing Local Variables
+-- Accessing Local Variables
+  - 可以access outer local variable 
+  
+-- pending Understanding Lambda Expressions
 
 
 
