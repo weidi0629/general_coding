@@ -1,4 +1,6 @@
--- 整个delegate的意思就是。让某个class/obj 去跑，跑到某一个特定状态就运行一个程序做个特别的程序（最简单就是打在屏幕上）。 这个程序就叫callback。 
+-- 整个delegate的意思就是。让某个class/obj 去跑，跑到某一个特定状态就运行一个程序做个特别的程序（最简单就是打在屏幕上）。 这个程序就叫callback。
+  - 可以想象class 有个修车功能，你就让他去修，你就是caller.修好了你可以叫他打个电话给你，‘打电话’就是callback，你自己定义。打电话可以换成发短信
+    ，写邮件，寄平信，甚至是丢一泡屎过来
 
 -- Understanding the .NET Delegate Type
   - In essence, a delegate is a type-safe object that points to another method (or possibly a list of methods) in the application, 
@@ -44,7 +46,28 @@
 -- Accessing Local Variables
   - 可以access outer local variable 
   
--- pending Understanding Lambda Expressions
+-- Understanding Lambda Expressions
+  - System.Predicate<T> is a generic delegate of type, returning a bool and takes a single type paramters 
 
-
+  - lambda even 可以不用显示出delegate的关键词
+    -  List<int> evenNumbers = list.FindAll(i => (i % 2) == 0); // FindAll的参数其实是需要一个delycate的
+    
+  -- Dissecting a Lambda Expression
+    - ArgumentsToProcess => StatementsToProcessThem
+    - explicitly state
+      - list.FindAll((int i) => (i % 2) == 0);
+      
+      - Processing Arguments Within Multiple Statements
+        - 放进大括号里就可以了 
+      
+      - Lambda Expressions with Multiple (or Zero) Parameters
+        - () => {return "Enjoy your string!";}
+      
+      
+      
+      
+      
+    
+    
+    
 
