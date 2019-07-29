@@ -25,9 +25,29 @@
         
     -- if you have a structure, which makes use of automatic property syntax (as we do here), the default constructor must be explicitly called
   
-  pengding 
-  Additional Explicit Conversions for the Square Type
+    -- Defining Implicit Conversion Routines
+      - public static implicit operator Rectangle(Square s)
   
   
-  
-  
+ --  Understanding Extension Methods
+     - they must be defined within a static class
+     
+     - using the this keyword as a modifier 指向你要改的class
+     
+     - if namespace is different, use the 'using' keywords
+     
+     - extension methods are not literally defined on the type being extended
+     
+     - VS 会提醒你哪些是ext method
+     
+     - 可以针对interface来定义extension
+      - 所有用了这个interface的class都ext这个class
+     
+     
+  -- pending Understanding Anonymous Types
+     
+     
+     
+     
+     
+     
