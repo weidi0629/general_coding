@@ -34,12 +34,13 @@ we can reverse the direction for insert and search in BIT
 so what we get is always the number greater than query values by using single search method.
 
 
-
 原始的BIT 是 origianl arr -> bit array 
 这题改为 original arr -> 排序过的 arr -> bit   
-1) bit 如上面所述，只需要记录个数。 
-2) ele 是按 origianl arr 的顺序来的，所以就算找到的index是在original arr 位置后面的，没关系，因为bit里面根本没有插进去过 -- bit插入的顺序是按
-ele的顺序
+1) bit 如上面所述，只需要记录个数。因为有个copy的数组已经排过序了，所以search function要返回的是比这个2*nums[i]还要大的index的数已经有几个了。
+   用BIT就是为了快速找到这个和。 
+2) ele 是按 origianl arr 的顺序来的。每次只是告知特地位置的值，比你大的数又多一个了。
+   所以第一步就算找到的index是在original arr 位置后面的，没关系，因为bit里面根本没有插进去过 -- bit插入的顺序是按ele的顺序
+
 */
 
 private int search(int[] bit, int i) {
