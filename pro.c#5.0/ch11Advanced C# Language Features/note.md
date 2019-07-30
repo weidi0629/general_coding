@@ -44,10 +44,17 @@
       - 所有用了这个interface的class都ext这个class
      
      
-  -- pending Understanding Anonymous Types
+  -- Understanding Anonymous Types
+     - 用处：只是定义一些名词变量，没有什么method之类
+     - var + initialization synctax
+       - var car = new { Make = make, Color = color, Speed = currSp };
+       - 会自动在后台建立 private perpety 
      
+     - anonymous type all derived from system.object, so all have Equals(), GetHashCode(), and ToString().
      
+  -- working with pointer types 
+    - 跟c++很像： * & -> etc. 
      
-     
-     
-     
+    -- 因为作者强烈建议不要用，所以跳过
+    
+    
