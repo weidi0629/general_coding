@@ -16,9 +16,11 @@ which is contrary to the "commonly" used way for BIT, where
 "i += (-i)" for insert, and
 "i -= i&(-i)" for search
 
-First, the concept of "search(i)" here should be explained as "getSum(i)", which is to get the accumulative frequency from the starting index to i (inclusively), where i is an index in BIT.
+First, the concept of "search(i)" here should be explained as "getSum(i)", which is to get the accumulative frequency from the 
+starting index to i (inclusively), where i is an index in BIT.
 
-In this problem, we want to get how many elements that are greater than 2 * nums[j], (num[j] is the current value that we are visiting). Therefore, instead of "searching down", here we need to "searching up".
+In this problem, we want to get how many elements that are greater than 2 * nums[j], 
+(num[j] is the current value that we are visiting). Therefore, instead of "searching down", here we need to "searching up".
 
 Based on the classical BIT format, where:
 "i += (-i)" for insert
