@@ -11,18 +11,24 @@
          - return theRedColors.ToArray();
       
        
-   pending page 446 Applying LINQ Queries to Collection Objects
+    -- Applying LINQ Queries to Collection Objects
+      - 就当一般的type用
+         - var fastCars = from c in myCars where c.Speed > 55 select c;
    
+    -- Applying LINQ Queries to Nongeneric Collections
+      - using the generic Enumerable.OfType<T>() extension method         
+         - // Transform ArrayList into an IEnumerable<T>-compatible type.
+            var myCarsEnum = myCars.OfType<Car>();
+         -  // Create a query expression targeting the compatible type.
+            var fastCars = from c in myCarsEnum where c.Speed > 55 select c;
    
+       - Filtering Data Using OfType<T>()
+         - 因为non-generic type可以是接受所有的object，用Oftype<T>可以过滤掉其他的type
+            - var myInts = myStuff.OfType<int>();
    
+-- investigating the C# LINQ Query Operators
    
-   
-   
-   
-   
-   
-   
-   
+   pending Basic Selection Syntax 搞了一个product info的array
    
    
    
