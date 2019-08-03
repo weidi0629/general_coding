@@ -28,7 +28,40 @@
    
 -- investigating the C# LINQ Query Operators
    
-   pending Basic Selection Syntax 搞了一个product info的array
+   -- project a new type 
+      - var nameDesc = from p in products select new { p.Name, p.Description };
+         - NO way of knowing the underlying data type
    
-   
+   -- get count 
+      - int numb = (from g in currentVideoGames where g.Length > 6 select g).Count();
+  
+   -- Reversing Result Sets 
+      - var prod in allProducts.Reverse()
+      
+   -- LINQ As a Better Venn Diagramming Tool
+      - 并集交集补集之类的 
+      - .except  .intersect   .union  .concat
+      
+      - remove duplicate
+         - .distinct()
+         
+      - aggregate
+         -  
+         
+         
+         
+         
+         
+         
+         
+         
+      
+      
+      
+      
+      
+      
+      
+      
+      
    
