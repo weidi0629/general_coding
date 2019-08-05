@@ -46,9 +46,16 @@
          - .distinct()
          
       - aggregate
-         -  
+      
+   -- Building Query Expressions Using the Enumerable Type and Lambda Expressions
          
-         
+      - string array 本身自己就有几个自带的function 
+         - var subset = currentVideoGames.Where(game => game.Contains(" "))
+            .OrderBy(game => game).Select(game => game);
+     
+   后面还可以有， Building Query Expressions Using the Enumerable Type and Anonymous Methods
+   - Building Query Expressions Using the Enumerable Type and Raw Delegates
+   一个比一个繁琐，但是这些事linq的底层实现。
          
          
          
