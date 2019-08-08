@@ -14,12 +14,15 @@
   - The CLR File Header
     - 以上这两个不是很重要
   
-  - pending CIL Code, Type Metadata, and the Assembly Manifest
+  - CIL Code, Type Metadata, and the Assembly Manifest
   
+    -- Building a C# Client Application
+      - need add 'using CarLibrary;' in the client application 
   
+-- Configuring Private Assemblies
+   - a *.config 告诉application要去哪里找 
   
-  
-  
+  -- Understanding Shared Assemblies
   
   
   
