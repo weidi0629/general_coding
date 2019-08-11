@@ -23,10 +23,13 @@
    - a *.config 告诉application要去哪里找 
   
   -- Understanding Shared Assemblies
+      - 就好像 mscorlib.dll一样，所有app都可以用 
   
+      -- The Global Assembly Cache
+         - GAC 文件夹里都是装shared 文件
+            - 4.0 and higher 是放在 C:\Windows\Microsoft.NET\assembly\GAC_MSIL
   
-  
-  
+  - pending understanding strong names 
   
   
   
