@@ -33,7 +33,7 @@ public int assignBikes(int[][] workers, int[][] bikes) {
                       //000111的这个状态是最优的
                         continue;
                     }
-                    int prev = s ^ (1 << j);
+                    int prev = s ^ (1 << j); // 按上面的例子，prev state就可能是 000011,000101,000110
                     dp[i][s] = Math.min(dp[i - 1][prev] + dis(workers[i - 1], bikes[j]), dp[i][s]) ;// workers[i - 1] 表示dp[i][j]的i其实是
                   //一直到workder i-1 
                     if (i == n) {
@@ -62,7 +62,7 @@ def assignBikes(self, workers, bikes):
             seen.add((i, taken))
             if i == len(workers): // 因为queue已经帮你最优过，取出来的肯定是最小的。注意这个i是有offset 1的
                 return cost
-            for j in xrange(len(bikes)):
+            for j in xrange(len(bikes)): // j 把所有可能下一轮可能出现的情况都过了一遍
                 if taken & (1 << j) == 0: //如果本轮这个情况还没有计算过，那就计算一下 
                     heapq.heappush(h, [cost + dis(i, j), i + 1, taken | (1 << j)]) //这里每次扔进去的 i+1，是下一轮要计算的. 每一轮的i，都算下
                       // 不同的取自行车的情况
