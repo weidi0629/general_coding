@@ -5,6 +5,9 @@ either place book i on a new shelve => dp[i] + height[i],
 or try to place book i on previous shelve => min(dp[j] + max(height[j+1] .. height[i])), where sum(width[j+1] + ... + sum(width[i]) <= shelve_width
 
 this actually has another meaning: grab previous books on this level and move to next level together, utilizing the sub_problem dp[j]
+
+比如第一层已经都放满了（例如5个），后面来了两个大的（总和正好等于width），那第三个大就要往回找第二个大的，加在一起小于width，比较得到了两个里面更高的那个值，
+直接跟 dp[5] +height比较就行，因为dp[5]是最优的
 */
 
 class Solution {
