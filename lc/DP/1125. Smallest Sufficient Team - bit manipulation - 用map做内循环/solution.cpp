@@ -1,7 +1,6 @@
     int n = req_skills.size();
     unordered_map<int,vector<int>> res;  // using unordered_map, we improve on time
-    res.reserve(1 << n);    // using reserved space, we avoid rehash
-    //map<int,vector<int>> res;
+    res.reserve(1 << n);    // using reserved space, we avoid rehash. 查看定义，这步可能不是必要的，但是是优化hash map
     res[0]={};
     unordered_map<string,int> skill_map;
     for(int i=0;i< req_skills.size();i++)
