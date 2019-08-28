@@ -1,5 +1,6 @@
 /*
 不要想着数学公式，就是按题意直接下来，非常straightforward
+calculation on the fly 
 */
 
 double champagneTower(int poured, int query_row, int query_glass) {
