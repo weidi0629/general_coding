@@ -1,6 +1,7 @@
 /*
-这题要点要点是child与parent关系，以及第一个数组的bfs的用法
+注意这题例子的输出很误导，每次insert输出parent value就好
 
+这题要点要点是child与parent关系，以及第一个数组的bfs的用法
 
 Store tree nodes to a list self.tree in bfs order.
 Node tree[i] has left child tree[2 * i + 1] and tree[2 * i + 2]
