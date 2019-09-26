@@ -53,3 +53,36 @@ public:
     }
     
 };
+
+/*
+here Lee combined two rounds into 1 pass, genius move as always. And actually here, the traversal is even more straightforward:
+i is the current position, lmax is the max subarray value whose length is L till the point i-M, you can think it as dp[i-M] or whatever, 
+using this to get the case when L is before M, then make another order at meantime.
+
+---------------------------- len == M
+|_________________________|______________|
+0-------------------------lmax---------- i
+
+*/
+
+int maxSumTwoNoOverlap(vector<int>& A, int L, int M) {
+        for (int i = 1; i < A.size(); ++i)
+            A[i] += A[i - 1];
+        int res = A[L + M - 1], Lmax = A[L - 1], Mmax = A[M - 1];
+        for (int i = L + M; i < A.size(); ++i) {
+            Lmax = max(Lmax, A[i - M] - A[i - L - M]); // 倒过来看，从 i-L-M 到 i-M,求的是这段紧贴M的值 |___...___|___L___|___M___|i
+            Mmax = max(Mmax, A[i - L] - A[i - L - M]);
+            res = max(res, max(Lmax + A[i] - A[i - M], Mmax + A[i] - A[i - L]));
+        }
+        return res;
+    }
+
+
+
+
+
+
+
+
+
+
