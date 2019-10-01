@@ -1,3 +1,9 @@
+/*
+首先记住 list.erase(iterator) 是 O(1)的。
+那就需要一个bookkeeping 来记录这些iterator跟key的关系。
+而正在maintain 这个 leaset recent use的，是这个list
+*/
+
 int size;
 list<int> lru;                              // MRU ... LRU
 unordered_map<int, list<int>::iterator> mp; // key -> iterator
