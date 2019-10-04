@@ -1,13 +1,20 @@
 /*
 https://leetcode.com/problems/count-of-smaller-numbers-after-self/discuss/76607/C%2B%2B-O(nlogn)-Time-O(n)-Space-MergeSort-Solution-with-Detail-Explanation
-
 这题跟493思路是一样的。但里面的搞法要更清楚一点
 
+这里面有个隐藏的条件，两个数组排序的时候 
+[1,3,4]
+[2,4,6]
+我们已经知道第二个数组所有的元素的位置要在第一个数组之后。所以在两个数组一个个排序时，如果第二个数组第一个值小于第一个数组第一个值，它拿出来排到
+result同时，也要进行计数。下一个第一个数组的值如果排进来，要加上这个计数值。
+注意如上面的例子，第一第二个数组已经排序过了，结果数组里的值已经赋值了。
+
+另一个要点是：
 这题主要是 indices这个数组。因为答案要求的是需要在原本的index上记录结果，sort更应该说是sort他index， 例如
 
 orit [12,15,3,1,6,10]
 indice [3,2,5,4,0,1] 是记录的原始数组的index，如果把原始数组的值（按记录的index）放进去，就是排序过的
-
+很厉害。
 
 
 */
