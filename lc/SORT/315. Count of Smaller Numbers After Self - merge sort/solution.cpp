@@ -7,7 +7,9 @@ https://leetcode.com/problems/count-of-smaller-numbers-after-self/discuss/76607/
 [2,4,6]
 我们已经知道第二个数组所有的元素的位置要在第一个数组之后。所以在两个数组一个个排序时，如果第二个数组第一个值小于第一个数组第一个值，它拿出来排到
 result同时，也要进行计数。下一个第一个数组的值如果排进来，要加上这个计数值。
-注意如上面的例子，第一第二个数组已经排序过了，结果数组里的值已经赋值了。
+注意如上面的例子，第一第二个数组已经排序过了，结果数组里的值已经赋值了。所以当第二个数组的数进结果数组时，不需要做什么事情 
+
+*整个过程要点就是记录第二个数组进来时累计的semicount给第一个数组的值来用* 
 
 另一个要点是：
 这题主要是 indices这个数组。因为答案要求的是需要在原本的index上记录结果，sort更应该说是sort他index， 例如
@@ -37,7 +39,7 @@ protected:
             while ((idx1 < mid) || (idx2 < last)) {
                 if ((idx2 == last) || ((idx1 < mid) &&
                        (nums[indices[idx1]] <= nums[indices[idx2]]))) {
-					          tmp.push_back(indices[idx1]);
+		    tmp.push_back(indices[idx1]); // tmp 是 indices数组的tmp
                     results[indices[idx1]] += semicount; //两边数组都是排序过的，如果i 可以建立在i-1的结果上面
                     ++idx1;
                 } else {
