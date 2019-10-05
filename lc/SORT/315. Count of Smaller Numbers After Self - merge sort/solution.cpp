@@ -18,7 +18,7 @@ orit [12,15,3,1,6,10]
 indice [3,2,5,4,0,1] 是记录的原始数组的index，如果把原始数组的值（按记录的index）放进去，就是排序过的
 很厉害。
 
-
+这题还有用 bst, bit, segtree来解的，放在tree的板块里了
 */
 
 class Solution {
