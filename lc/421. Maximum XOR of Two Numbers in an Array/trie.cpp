@@ -1,3 +1,7 @@
+/*
+这题的trie跟其他不太一样，在helper function里面，不是一定要从头找到尾，在当中找进去也是可以的
+*/
+
 class Solution {
 public:
     class TreeNode {
