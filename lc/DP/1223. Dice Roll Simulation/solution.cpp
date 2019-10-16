@@ -55,3 +55,54 @@ But this will be TLE. So we add memorization:
         if(last >= 0) dp[dieLeft][last][curlen] = ans;
         return ans;
     }
+
+/*
+第二种方法
+/*
+ dp[i][j] i: 到目前为止筛子丢了几次了， j这次停在哪个点
+ 
+ 跟之前的关系：例如1的limit是3
+ 
+ 比如 axxb， b丢到1，那么我们要保证的 a11没有，也就是211,311,411 ...  911, 那不是就这八种呢。 不是的，你要计算的有多少种方法到a，而且a不能是1，不然就已经超限了。
+ 
+ 用的办法是  sum[i-1][1] - sum[i-limi[1]][2-9] = sum[i-1][1] - (sum[i-limi[1]][6] - sum[i-limi[1]][1])
+ 
+ 如果正好长度是limi，只要减去一个就行了，就是 111这种情况 
+ 
+ 还有一点是sum在增加，所以每次筛子（n向前），内部遍历0-6之后，要找个地方存sum，我们就存在 dp[i][6]里了
+ 
+*/
+
+class Solution {
+    public int dieSimulator(int n, int[] rollMax) {
+        int mod = (int)1e9 + 7;
+        //dp[i][j] represents the number of distinct sequences that can be obtained when rolling i times and ending with j
+        //The one more row represents the total sequences when rolling i times
+        int[][] dp = new int[n + 1][7];
+        //init for the first roll
+        for (int i = 0; i < 6; i++) {
+            dp[1][i] = 1;
+        }
+        dp[1][6] = 6;
+        for (int i = 2; i <= n; i++) {
+            int total = 0;
+            for (int j = 0; j < 6; j++) {
+                //If there are no constraints, the total sequences ending with j should be the total sequences from preious rolling
+                dp[i][j] = dp[i - 1][6];
+                //For xx1, only 111 is not allowed, so we only need to remove 1 sequence from previous sum
+                if (i - rollMax[j] == 1) {
+                    dp[i][j]--;
+                }
+                if (i - rollMax[j] >= 2) {
+                    int reduciton = dp[i - rollMax[j] - 1][6] - dp[i - rollMax[j] - 1][j];
+                    //must add one more mod because subtraction may introduce negative numbers
+                    dp[i][j] = ((dp[i][j] - reduciton) % mod + mod) % mod;
+                }
+                total = (total + dp[i][j]) % mod;
+            }
+            dp[i][6] = total;
+        }
+        return dp[n][6];
+    }
+}
+
