@@ -20,8 +20,8 @@ public int findMaximumXOR(int[] nums) {
             Set<Integer> set = new HashSet<>();
             for (int num : nums) {
                 
-/*                we only care about the left parts, for example, if i = 2, then we have
-                {1100, 1000, 0100, 0000} from {1110, 1011, 0111, 0010}*/
+                /*we only care about the left parts, for example, if i = 2, then we have
+                {1100, 1000, 0100, 0000} from {1110, 1011, 0111, 0010} 因为mask后面几位都是0，所以把n后面的几位都删掉了   */
                 int leftPartOfNum = num & mask;
                 set.add(leftPartOfNum);
             }
