@@ -1,25 +1,25 @@
 class Solution {
 public:
-    vector<int> parent;
     vector<int> findRedundantConnection(vector<vector<int>>& edges) {
-        for(int i=0;i<parent.size();i++)
-            parent.push_back(i);  // every node's parent is itself at first
+        vector<int> p(2001), res;
+        iota(p.begin(),p.end(),0);
         for(auto e:edges){
-            int v0=e[0],v1=e[1];
-            if(find(v0)==find(v1))  // has the same root, found it!
+            int a=find(e[0],p), b=find(e[1],p);
+            if(a==b){
                 return e;
-            //parent[find(v0)] = parent[find(v1)]; // 这里错了,右边不需要parent
-            else
-                parent[find(v0)] = find(v1); // setting the parent，给它再升一级
+            }else{
+                p[a] = b;
+            }
         }
         return {};
     }
     
-    int find(int v){  // this would create a fat tree
-        if(v!=parent[v]) // is not itself, 已经被人搞过了
-            parent[v]=find(parent[v]);
-        return parent[v];
+    int find(int i, vector<int>& p){
+        if(i!=p[i])
+            return find(p[i],p);
+        return i;
     }
+    
 };
 
 // this tree won't be a fat tree
