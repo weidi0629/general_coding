@@ -15,7 +15,11 @@
       |     |     |
        ---  3 --- 4
 寻找 scc strongly connected component. 主要是dfs，在dfs时候每个node设定一个自己的当前次数和这次探索（stack上的）次数。根据这两个值可以找到题设要得
-关键路径。细节注意代码里的comment。
+关键路径。
+
+只要是在一堆里的，总能把一堆里面最小的 lowlink给分享给大家
+
+细节注意代码里的comment。
 */
 
 class Solution {
