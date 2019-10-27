@@ -42,7 +42,7 @@ https://leetcode.com/problems/circular-permutation-in-binary-representation/disc
 下面回复里有个版本更清楚，贴在下面。这个版本紧靠gray code变化的规律。 都是从最0位开始flip，如果见过，就把高位变1，继续从0位开始flip
 G(n): 000, 001, 011, 010, 110, 111, 101, 100
 
-还是从基本那个版本开始比较好
+但是基本那个版本，没有gray code概念也是可以做
 */
 
 class Solution {
