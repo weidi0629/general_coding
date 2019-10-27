@@ -1,7 +1,24 @@
 /*
-不能简单的考虑duplicated parents, 比 [[4,2],[1,5],[5,2],[5,3],[2,4]]got [5,2] but [4,2] expected，
-and [[2,1],[3,1],[4,2],[1,4]] got [3,1] but [2,1] expected。
-有个图在狗哥.doc里可以看看
+      1
+      |
+      v
+      5
+    ----
+   |     | 
+   |     |
+   v     v
+   2     3
+  ^ |
+  | |
+  | v
+   4
+
+如果简单的按找parent的做法，有可能找到的是 5->2, 也有可能是 4->2， depends on 他们出现的顺序。所以不能简单的跟undirenct那样做。
+
+算法是：如果找到了有两个parent的点（注意是最近的parent，不是总的root的parent），把有问题的两条都拿出来，然后去掉一条。做正常的union find，
+如果还是找到有相同parent（注意这时是总得root的那种union find），那这个就把这条线弄出来。如果都valid，就是去掉的这条线有问题。
+要问如何去掉一条边？就是把边的另一端设成0，在后面真的union find时不考虑0的情况
+
 */
 
 class Solution {  // find the duplicated parents or circle
