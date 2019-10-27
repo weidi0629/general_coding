@@ -35,6 +35,16 @@ python:
 
 
 // 基本解法： 自己做的时候思路基本正确，但是dfs到底返回什么有所纠结，看程序前可以想一下，返回什么？ 
+
+/*
+https://leetcode.com/problems/circular-permutation-in-binary-representation/discuss/414145/Java-DFS-%2B-Bit
+帖子上面写的更基本，
+下面回复里有个版本更清楚，贴在下面。这个版本紧靠gray code变化的规律。 都是从最0位开始flip，如果见过，就把高位变1，继续从0位开始flip
+G(n): 000, 001, 011, 010, 110, 111, 101, 100
+
+还是从基本那个版本开始比较好
+*/
+
 class Solution {
     List<Integer> list;
     
@@ -59,7 +69,4 @@ class Solution {
         }
     }
 }
-/*
-https://leetcode.com/problems/circular-permutation-in-binary-representation/discuss/414145/Java-DFS-%2B-Bit
-帖子上面写的更基本，下面回复里有个版本更清楚，贴在上面了
-*/
+
