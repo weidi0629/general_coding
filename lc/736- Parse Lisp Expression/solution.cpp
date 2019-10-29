@@ -25,7 +25,7 @@ public:
                 if(start > str.size()) //consider this: (let x 3 x 2 x)
                     return help(variable,str);
                 string tmp = parse(start,str);
-                mymap[variable] = helper(mymap,tmp);//这个map是按值传进去的，如果后面有mul/add的表达式，都是以从这个map里取数据，比如(let x 2 (mult x 5))
+                mymap[variable] = help(mymap,tmp);//这个map是按值传进去的，如果后面有mul/add的表达式，都是以从这个map里取数据，比如(let x 2 (mult x 5))
             }
         }else if(sign = 'add'){
             return = help(mymap,parse(start,str)) + help(mymap,parse(start,str)); 
