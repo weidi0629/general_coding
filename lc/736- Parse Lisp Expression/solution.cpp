@@ -23,7 +23,7 @@ public:
             while(true){  //这个while里的东西是最重要的
                 string variable = parse(start,str); 
                 if(start > str.size()) //consider this: (let x 3 x 2 x)
-                    return help(variable,str);
+                    return help(variable,mymap);
                 string tmp = parse(start,str);
                 mymap[variable] = help(mymap,tmp);//这个map是按值传进去的，如果后面有mul/add的表达式，都是以从这个map里取数据，比如(let x 2 (mult x 5))
             }
