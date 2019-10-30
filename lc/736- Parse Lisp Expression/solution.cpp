@@ -21,8 +21,8 @@ public:
         int start = 0; //start放在这里很重要，他是局部的按ref传递的变量,从现在开始，我们一直在搞str了
         if(sign = 'let'){
             while(true){  //这个while里的东西是最重要的
-                string variable = parse(start,str); 
-                if(start > str.size()) //consider this: (let x 3 x 2 x)
+                string variable = parse(start,str); // 这是题设的限定，在let后面不会直接跟一个括号的，肯定是一个变量
+                if(start > str.size()) //consider this: (let x 3 x 2 x)。总体上来说， let 最后肯定是变量名，让你返回这个变量的值
                     return help(variable,mymap);
                 string tmp = parse(start,str);
                 mymap[variable] = help(mymap,tmp);//这个map是按值传进去的，如果后面有mul/add的表达式，都是以从这个map里取数据，比如(let x 2 (mult x 5))
