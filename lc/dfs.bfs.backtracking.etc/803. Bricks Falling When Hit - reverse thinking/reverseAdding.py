@@ -7,6 +7,9 @@
 3. 最后dfs后要减掉自己
 
 https://leetcode.com/problems/bricks-falling-when-hit/discuss/119829/Python-Solution-by-reversely-adding-hits-bricks-back
+   
+讨论里还有一个常规的dfs做法   
+   
 */
 
 class Solution:
