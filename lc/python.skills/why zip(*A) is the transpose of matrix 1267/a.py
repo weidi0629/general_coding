@@ -29,3 +29,6 @@ zip([1,2,3],[4,5,6]) => [1,4][2,5][3,6]
 (1, 0, 1)
 (1, 0, 1)
 
+ def countServers(self, A):
+        X, Y = map(sum, A), map(sum, zip(*A))
+        return sum(X[i] + Y[j] > 2 for i in xrange(len(A)) for j in xrange(len(A[0])) if A[i][j])
