@@ -33,7 +33,8 @@ void computeLPSArray(char* pat, int M, int* lps)
         else // (pat[i] != pat[len]) 
         {    
             // 如果不一样，注意在这个之前都是一样的，所以我们直接跳到 lps[len-1],看他之前这个有多少个prefix跟他一样。跳完只好回到while再判断
-            // 如果这时相等，那这个跳回去的len也就是i的len。这个有点dp的感觉在里面
+            // 如果这时相等，那这个跳回去的len也就是i的len。这个有点dp的感觉在里面.
+            // 可以看后面的详解
             if (len != 0) { 
                 len = lps[len - 1]; 
    
@@ -46,3 +47,39 @@ void computeLPSArray(char* pat, int M, int* lps)
         } 
     } 
 } 
+
+/*
+详解lps的构建：
+比如  
+A A B A A B A A C
+0 1 0 1 2 3 4 5 0
+
+在C的时候，前面有五个字符都是一样的: AABAA 
+
+|------->
+A A B A A B A A C
+     |-------->
+现在想找一个prefix,结束在C之前那个A（下面的箭头）并且这个prefix后面那个字符是C。但下面箭头的A, 也就是上面箭头的A，我们知道上面箭头的长度：5，
+所以只要找lps[5-1] 得到他的lps。
+到了第二轮，就会检查它下面的数是否是C
+     
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
