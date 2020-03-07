@@ -5,11 +5,11 @@ https://www.geeksforgeeks.org/kmp-algorithm-for-pattern-searching/
 
 算法的要点是做比较，比如：
 TXT          AABAA...
-PATTERN      AABAC        lps[0,1,0,1,2]
-当上面的A跟下面的C相比时，说明C前面的跟上面的TXT 已经是一样的了。那pattern的lps同样适用于上面的txt。根据算法，现在j指到C，找到lps[j-1] ==1,表示B后面的那个
-A，在前面有个prefix是一样的，所以不用比了，这点很重要要想通（如果有两个一样，那两个不用比了。。），所以直接比j==1就行
+PATTERN      AABAC        lps[0,1,0,1,0]
+当上面的A跟下面的C相比时，说明C前面的跟上面的TXT 已经是一样的了。那pattern的lps同样适用于上面的txt。根据算法，现在j指到C，找到lps[j-1] ==1,
+表示B后面的那个A，在前面有一个prefix是一样的，所以不用比了，这点很重要要想通（如果有两个一样，那两个不用比了。。），所以直接比j==1就行
 TXT          AABAA...
-PATTERN         AABAC        lps[0,1,0,1,2]
+PATTERN         AABAC        lps[0,1,0,1,0]
 
 而在构建lps时，看下面的comment： 
 
