@@ -1,18 +1,35 @@
+/*
 https://www.geeksforgeeks.org/kmp-algorithm-for-pattern-searching/
 以上总体来说这个还是讲的很清楚的 
 
 注意这个lps是给要pattern做的
 
 算法的要点是做比较，比如：
-TXT          AABAA...
-PATTERN      AABAC        lps[0,1,0,1,0]
-当上面的A跟下面的C相比时，说明C前面的跟上面的TXT 已经是一样的了。那pattern的lps同样适用于上面的txt。根据算法，现在j指到C，找到lps[j-1] ==1,
-表示B后面的那个A，在前面有一个prefix是一样的，所以不用比了，这点很重要要想通（如果有两个一样，那两个不用比了。。），所以直接比j==1就行
-TXT          AABAA...
-PATTERN         AABAC        lps[0,1,0,1,0]
+TXT          T:AABAA... 
+PATTERN      P:AABAC    ->    lps[0,1,0,1,0]
+假设此时比较到 T[4] !=P[4]
+那按照naive方法，我们应该把P往右移一位，从T[1] 开始从头比较
+      i    
+T:AABAA... 
+p: AABAC    
+但这样只移动1位是非常浪费的，为什么呢，因为我们知道，从T[1..3] 跟P[0..2]肯定是不一样的，依据就是lps数组。在i之前，唯一可能T跟P相同的范围，就是
+lps[i-1]的，这里的lps[3] = 1,所以我们可以直接跳到
+      i    
+T:AABAA... 
+p:   AABAC    
+
+下面这个例子，lps比较大，所以我们只能移动一位
+T:AAAAB...  i=3
+p:AAAB  lps[0,1,2,0]    
+==>
+T:AAAAB...
+P: AAAB
+
+注意算法里通过reset j来与i做比较，其实是向右移几位一个意思。
+
 
 而在构建lps时，看下面的comment： 
-
+*/
 
 
 void computeLPSArray(char* pat, int M, int* lps) 
