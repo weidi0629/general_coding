@@ -10,7 +10,7 @@ class UndergroundSystem:
         self.transit[id].extend([sname, t])
 
     def checkOut(self, id: int, stationName: str, t: int) -> None:
-        srcname, srct = self.transit[id]
+        srcname, srct = self.transit[id] # if list size and variables equals, can assign directly
         count, val = self.times[srcname][stationName] 
         self.times[srcname][stationName] = [count+1, val+t-srct] 
         self.transit[id] = []
