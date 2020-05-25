@@ -1,3 +1,5 @@
+所以当递归时，pass进list，set等，出来前要去掉
+
 There are essentially three kinds of 'function calls':
 
 Pass by value
