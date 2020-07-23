@@ -7,7 +7,18 @@ a>>b
 ...
 
 
+# how to get right-most digit 
+a=a&(-a)
+the way to get -a is, reverse every digit, then plus 1
+12: 01100
+~:  10100
+  
+# in binary count, how each bit change when add one (Single Number II)
+all the left element must be 1 and itself should be zero
+bit2 = bit2^(bit1&i)
+bit3 = bit3^(bit2&bit1&i)
 
-
-
+# how to reset binary counter:(Single Number II)
+ it's the count of 1's, only all ones, then the mask become zero, the counter can & the mask to get reset
+ mask = ~(y1 & y2 & ... & ym), where yj = xj if kj = 1, and yj = ~xj if kj = 0 (j = 1 to m)
 
