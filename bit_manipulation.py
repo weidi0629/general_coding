@@ -22,3 +22,12 @@ bit3 = bit3^(bit2&bit1&i)
  it's the count of 1's, only all ones, then the mask become zero, the counter can & the mask to get reset
  mask = ~(y1 & y2 & ... & ym), where yj = xj if kj = 1, and yj = ~xj if kj = 0 (j = 1 to m)
 
+# how to test if power of 2:
+n&(n-1)==0 # 1 will gone, all the 0 right to that 1 will become 0
+
+# how to test if power of 4:
+(n-1)%3==0
+#(1) 4^n - 1 = (2^n + 1) * (2^n - 1)
+#(2) among any 3 consecutive numbers, there must be one that is a multiple of 3
+#among (2^n-1), (2^n), (2^n+1), one of them must be a multiple of 3, and (2^n) cannot be the one, therefore either (2^n-1) or (2^n+1) must be a multiple of 3, 
+#and 4^n-1 must be a multiple of 3 as well.
