@@ -63,9 +63,12 @@ If cache is empty, it will call function generate().
 
 In generate(), it will generate an integer in range [0, 7^19].
 7^19 = 11398895185373143, and close to an pow of 10. 这是7^19是随机数可以取的范围 
-// 好比49时，大于40的不要。 这里大雨 xxxx40的不要，概率是极小的
+// 好比49时，大于40的不要。 这里大于 xxxx40的不要，概率是极小的
 So in 11398895185373140 / 11398895185373143 = 99.99999999999997% cases, it will generate at least 1 integer.
-// 如果是 10000000000000000，也起码有16个随机数可以取，因为每一个个位都是随机数加上去的。
+
+// 如果是 10000000000000000, 那就是在10^16这个range, 如果每一位都是 10^i + random10, 最大就只能到达 10000000000000000， 这个是可以产生 16个随机数，不用担心位数比较小的情况
+比如 999， 那表示后来产生的几个都是0，所以其实就是  0000000999， 那取余就都是0。 只要把个位去掉，取十的余数就肯定是个随机数，不理解可以再看下之前 49->的例子。所以，大多数情况下（87.73%），
+是肯定会超过去掉个位的range的。这个大多数的比例，也是为什么要这么做的原因。所以后面lee说这句：
 And in 10000000000000000 / 11398895185373143 = 87.73% cases, it will generate at least 16 integers. 
 
 N = 19 is the best we can choose in long integer range,
@@ -87,7 +90,7 @@ C++:
         long cur = 0, range = long(pow(7, n));
         // 这里的i是从0开始的，理论上最多也就是加到 pow(7,i)
         for (int i = 0; i < n; ++i) cur += long(pow(7, i)) * (rand7() - 1);
-        while (cur < range / 10 * 10) {// 这里除以10乘以10是去掉个位那个数
+        while (cur < range / 10 * 10) {// 这里除以10乘以10是去掉range个位那个数，只要个位去掉，取余肯定是个随机数
             cache.push(cur % 10 + 1); // 这个是跟49那个一样，取个位的那个
             cur /= 10;// 又要取下一个个位
             range /= 10;//ranage缩小 
