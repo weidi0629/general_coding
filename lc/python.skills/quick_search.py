@@ -23,3 +23,16 @@ for a, b, p in arr:
 # loop the 1st level, it would output the 2nd level key, NOT a dictionary
 for i in d[x]:
   print(i) # 2nd level key
+
+#
+# sorted list - 
+#
+from sortedcontainers import SortedList
+SList = SortedList()
+# do the bisect
+pos1 = bisect_left(SList, nums[i] - t)
+# remove, one by one
+# SList=[1,2,2,3]
+# SList.remove(2) 
+# SList=[1,2,3]
+#https://leetcode.com/problems/contains-duplicate-iii/discuss/824603/Python-SortedList-O(n-log-k)-solution-explained.
