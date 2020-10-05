@@ -37,7 +37,7 @@ pos1 = bisect_left(SList, nums[i] - t)
 # SList=[1,2,3]
 #https://leetcode.com/problems/contains-duplicate-iii/discuss/824603/Python-SortedList-O(n-log-k)-solution-explained.
 
-
+# sort comp function
 # Python different solutions (bubble, insertion, selection, merge, quick sorts) and functools.cmp_to_key
 https://leetcode.com/problems/largest-number/discuss/53298/Python-different-solutions-(bubble-insertion-selection-merge-quick-sorts)
     
