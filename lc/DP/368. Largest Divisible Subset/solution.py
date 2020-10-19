@@ -29,7 +29,7 @@ class Solution:
             if dp[i][0] > maxVal:  # get the max size 
                 maxIndex, maxVal = i, dp[i][0]
         i, lds = maxIndex, [nums[maxIndex]]
-        while i != dp[i][1]: # only the starting element has no prevous divisor, idx == himself 
+        while i != dp[i][1]: # only the starting element has no prevous divisor, idx == himself, like a linked list going back 
             i = dp[i][1]
             lds.append(nums[i])
         return lds
